@@ -1,0 +1,61 @@
+/* Shared premium button with a two-line text roll */
+.reusable-button {
+  min-height: 48px;
+  padding: 0 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid var(--color-antique-gold);
+  border-radius: 999px;
+  background: var(--color-antique-gold);
+  color: var(--primary-bg-color);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    background-color 280ms ease,
+    border-color 280ms ease,
+    color 280ms ease,
+    transform 280ms ease;
+}
+
+.reusable-button:hover {
+  transform: translateY(-1px);
+  border-color: var(--color-dark-gold);
+  background: var(--color-dark-gold);
+}
+
+.button-roll-window {
+  height: 1.15em;
+  overflow: hidden;
+}
+
+.button-roll-track {
+  display: flex;
+  flex-direction: column;
+  transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.button-roll-label {
+  min-height: 1.15em;
+  display: block;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.reusable-button:hover .button-roll-track,
+.reusable-button:focus-visible .button-roll-track {
+  transform: translateY(-50%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reusable-button,
+  .button-roll-track {
+    transition-duration: 0.01ms;
+  }
+}

@@ -1,0 +1,320 @@
+/* Premium ASANZO footer */
+.site-footer.footer-layout {
+  --footer-background: var(--color-dark-brown);
+  --footer-accent: var(--color-antique-gold);
+  padding: 28px 0 24px;
+  background: var(--color-dark-brown);
+  color: var(--primary-bg-color);
+}
+
+.footer-layout-container {
+  width: min(calc(100% - 64px), 1080px);
+  max-width: none;
+}
+
+.footer-topbar {
+  min-height: 62px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.footer-logo-link {
+  width: 94px;
+  height: 54px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-logo-link img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.footer-return-link {
+  min-width: 154px;
+  min-height: 44px;
+  padding: 0 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border: 1px solid color-mix(in srgb, var(--primary-bg-color) 76%, transparent);
+  border-radius: 999px;
+  color: var(--primary-bg-color);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition:
+    border-color 200ms ease,
+    background-color 200ms ease,
+    color 200ms ease;
+}
+
+.footer-return-link:hover {
+  border-color: var(--footer-accent);
+  background: var(--footer-accent);
+  color: var(--footer-background);
+}
+
+.footer-return-link svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+}
+
+.footer-columns {
+  padding: 0 0 36px;
+  display: grid;
+  grid-template-columns:
+    minmax(220px, 1.4fr)
+    minmax(190px, 1.1fr)
+    minmax(120px, 0.65fr)
+    minmax(150px, 0.8fr);
+  gap: 38px;
+  align-items: start;
+}
+
+.footer-column-title {
+  margin-bottom: 20px;
+  color: var(--color-antique-gold);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.footer-brand-column .footer-column-title {
+  max-width: 260px;
+  color: var(--primary-bg-color);
+  font-size: 22px;
+  line-height: 1.2;
+  text-transform: none;
+}
+
+.footer-description {
+  max-width: 310px;
+  color: color-mix(in srgb, var(--primary-bg-color) 78%, transparent);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.footer-email,
+.footer-phone {
+  display: inline-block;
+  color: var(--primary-bg-color);
+  font-size: 13px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+  transition: color 180ms ease;
+}
+
+.footer-phone {
+  display: block;
+  margin-top: 7px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 22px;
+}
+
+.footer-email:hover,
+.footer-phone:hover {
+  color: var(--footer-accent);
+}
+
+.footer-address {
+  margin-top: 12px;
+  color: color-mix(in srgb, var(--primary-bg-color) 78%, transparent);
+  font-size: 13px;
+  font-style: normal;
+  line-height: 1.65;
+}
+
+.footer-socials {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.footer-socials a {
+  width: 23px;
+  height: 23px;
+  display: grid;
+  place-items: center;
+  color: var(--primary-bg-color);
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.footer-socials a:hover {
+  transform: translateY(-2px);
+  color: var(--footer-accent);
+}
+
+.footer-socials svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+}
+
+.footer-socials svg path {
+  fill: currentColor;
+  stroke: none;
+}
+
+.footer-social-dot {
+  fill: currentColor;
+  stroke: none;
+}
+
+.footer-nav,
+.footer-room-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+}
+
+.footer-nav a,
+.footer-room-list a {
+  color: color-mix(in srgb, var(--primary-bg-color) 84%, transparent);
+  font-size: 12px;
+  line-height: 1.35;
+  transition: color 180ms ease;
+}
+
+.footer-nav a:hover,
+.footer-room-list a:hover {
+  color: var(--footer-accent);
+}
+
+.footer-nav a[aria-current="page"],
+.footer-room-list a[aria-current="page"] {
+  color: var(--color-antique-gold);
+}
+
+.footer-legal {
+  min-height: 39px;
+  padding-top: 13px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  border-top: 1px solid
+    color-mix(in srgb, var(--primary-bg-color) 25%, transparent);
+  color: color-mix(in srgb, var(--primary-bg-color) 70%, transparent);
+  font-size: 10px;
+}
+
+.footer-legal-note {
+  text-align: right;
+}
+
+@media (max-width: 900px) {
+  .footer-layout-container {
+    width: min(calc(100% - 52px), 760px);
+  }
+
+  .footer-columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 34px 32px;
+  }
+
+  .footer-room-column {
+    grid-column: 2;
+  }
+
+  .footer-brand-column {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 560px) {
+  .site-footer.footer-layout {
+    padding: 22px 0 18px;
+  }
+
+  .footer-layout-container {
+    width: calc(100% - 40px);
+  }
+
+  .footer-topbar {
+    min-height: 60px;
+    align-items: flex-start;
+  }
+
+  .footer-logo-link {
+    width: 76px;
+    height: 44px;
+  }
+
+  .footer-return-link {
+    min-width: 126px;
+    min-height: 38px;
+    padding-inline: 14px;
+    gap: 8px;
+    font-size: 9px;
+  }
+
+  .footer-columns {
+    padding-bottom: 28px;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 22px;
+  }
+
+  .footer-contact-column {
+    grid-column: 1 / -1;
+  }
+
+  .footer-column-title {
+    margin-bottom: 17px;
+    font-size: 16px;
+  }
+
+  .footer-brand-column {
+    grid-column: 1 / -1;
+  }
+
+  .footer-address {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
+  .footer-socials {
+    margin-top: 16px;
+  }
+
+  .footer-legal {
+    flex-direction: column;
+    gap: 6px;
+    font-size: 9px;
+  }
+
+  .footer-legal-note {
+    text-align: left;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-return-link,
+  .footer-socials a,
+  .footer-nav a,
+  .footer-room-list a {
+    transition-duration: 0.01ms;
+  }
+}
