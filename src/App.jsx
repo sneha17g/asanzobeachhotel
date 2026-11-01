@@ -3,7 +3,7 @@ import ScrollAnimations from "./components/ScrollAnimations.jsx";
 import Footer from "./layout/Footer.jsx";
 import Navbar from "./layout/Navbar.jsx";
 import "./App.css";
-import About from "./pages/about.jsx";
+import About from "./pages/About.jsx";
 import Contact from "./pages/Contact.jsx";
 import Home from "./pages/Home.jsx";
 import RoomDetails from "./pages/RoomDetails.jsx";
