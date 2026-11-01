@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollAnimations from "./components/ScrollAnimations.jsx";
+import ScrollToTop from "./components/ScrollToTop.jsx";
 import Footer from "./layout/Footer.jsx";
 import Navbar from "./layout/Navbar.jsx";
 import "./App.css";
@@ -12,6 +13,7 @@ import Rooms from "./pages/Rooms.jsx";
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="site-shell" id="top">
         <Navbar />
         <ScrollAnimations />
