@@ -1,6 +1,6 @@
 import "./Contact.css";
-import asanzoHotel from "../assets/Asanzo.jpg";
-import pattayaCoast from "../assets/homepage/frame2.JPG";
+import asanzoHotel from "../assets/optimized/hotel-front.jpg";
+import pattayaCoast from "../assets/optimized/hero-frame-2.jpg";
 
 function Contact() {
   return (

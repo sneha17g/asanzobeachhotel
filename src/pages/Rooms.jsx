@@ -1,12 +1,12 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Button from "../components/Button.jsx";
-import roomHeroVideo from "../assets/room/roomHero.mp4";
-import roomPhotoOne from "../assets/room/room1.jpg";
-import roomPhotoTwo from "../assets/room/room2.jpg";
-import roomPhotoThree from "../assets/room/room3.jpg";
-import roomPhotoFour from "../assets/room/room4.jpg";
-import roomPhotoFive from "../assets/room/room5.jpg";
-import roomPhotoSix from "../assets/room/room6.jpg";
+import roomHeroImage from "../assets/optimized/rooms-hero.jpg";
+import roomPhotoOne from "../assets/optimized/room-1.jpg";
+import roomPhotoTwo from "../assets/optimized/room-2.jpg";
+import roomPhotoThree from "../assets/optimized/room-3.jpg";
+import roomPhotoFour from "../assets/optimized/room-4.jpg";
+import roomPhotoFive from "../assets/optimized/room-5.jpg";
+import roomPhotoSix from "../assets/optimized/room-6.jpg";
 import { rooms } from "../data/rooms.js";
 import "./Rooms.css";
 
@@ -169,17 +169,14 @@ function Rooms() {
   return (
     <>
       <section className="rooms-page rooms-hero" aria-labelledby="rooms-title">
-        <video
-          className="rooms-hero-video"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
+        <img
+          className="rooms-hero-image"
+          src={roomHeroImage}
+          alt=""
           aria-hidden="true"
-        >
-          <source src={roomHeroVideo} type="video/mp4" />
-        </video>
+          fetchPriority="high"
+          decoding="async"
+        />
         <div className="rooms-hero-overlay" aria-hidden="true" />
         <div className="container rooms-hero-content">
           <p className="rooms-hero-eyebrow">Stay at Asanzo</p>

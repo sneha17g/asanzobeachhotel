@@ -1,7 +1,7 @@
-import standardRoomPhoto from "../assets/room/singleRoom.jpg";
-import deluxeRoomPhoto from "../assets/room/deluxeRoom.jpg";
-import familyRoomPhoto from "../assets/room/familyroom.jpg";
-import familyRoomPhotoTwo from "../assets/room/familyRoom2.jpg";
+import standardRoomPhoto from "../assets/optimized/single-room.jpg";
+import deluxeRoomPhoto from "../assets/optimized/deluxe-room.jpg";
+import familyRoomPhoto from "../assets/optimized/family-room.jpg";
+import familyRoomPhotoTwo from "../assets/optimized/family-room-2.jpg";
 
 export const rooms = [
   {

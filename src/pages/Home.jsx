@@ -6,13 +6,13 @@ import {
 } from "react";
 import { Link } from "react-router-dom";
 import Button from "../components/Button.jsx";
-import asanzoHotel from "../assets/Asanzo.jpg";
-import frameOne from "../assets/homepage/frame1.JPG";
-import frameTwo from "../assets/homepage/frame2.JPG";
-import frameThree from "../assets/fram3.jpg";
-import frameFour from "../assets/frame4.JPG";
-import frameFive from "../assets/frame5.JPG";
-import frameSix from "../assets/frame6.JPG";
+import asanzoHotel from "../assets/optimized/hotel-front.jpg";
+import frameOne from "../assets/optimized/hero-frame-1.jpg";
+import frameTwo from "../assets/optimized/hero-frame-2.jpg";
+import frameThree from "../assets/optimized/hero-frame-3.jpg";
+import frameFour from "../assets/optimized/hero-frame-4.jpg";
+import frameFive from "../assets/optimized/hero-frame-5.jpg";
+import frameSix from "../assets/optimized/hero-frame-6.jpg";
 import { rooms } from "../data/rooms.js";
 import "./Home.css";
 

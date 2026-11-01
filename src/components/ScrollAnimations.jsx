@@ -72,24 +72,7 @@ function ScrollAnimations() {
           ".home-hero, .about-hero, .rooms-hero, .contact-hero",
         );
         const imageTargets = [...visuals, ...images];
-        let timeline;
-        timeline = gsap.timeline({
-          scrollTrigger: {
-            trigger: section,
-            start: isHero ? "top 100%" : "top 84%",
-            end: isHero ? "bottom 18%" : "bottom 16%",
-            toggleActions: "play reverse play reverse",
-            invalidateOnRefresh: true,
-            onEnter: () => timeline.restart(),
-            onLeave: () => timeline.reverse(),
-            onEnterBack: () => timeline.restart(),
-            onLeaveBack: () => timeline.reverse(),
-          },
-        });
-        sectionAnimations.push({
-          scrollTrigger: timeline.scrollTrigger,
-          timeline,
-        });
+        const timeline = gsap.timeline();
         if (headings.length > 0) {
           timeline.fromTo(
             headings,
@@ -179,6 +162,19 @@ function ScrollAnimations() {
           );
         }
 
+        const scrollTrigger = ScrollTrigger.create({
+          trigger: section,
+          animation: timeline,
+          start: isHero ? "top 100%" : "top 84%",
+          end: isHero ? "bottom 18%" : "bottom 16%",
+          toggleActions: "play reverse play reverse",
+          invalidateOnRefresh: true,
+        });
+        sectionAnimations.push({ scrollTrigger, timeline });
+        const sectionBounds = section.getBoundingClientRect();
+        if (sectionBounds.top < window.innerHeight && sectionBounds.bottom > 0) {
+          timeline.restart();
+        }
       });
     }, root);
 
@@ -195,11 +191,9 @@ function ScrollAnimations() {
       });
       ScrollTrigger.update();
     };
-    root.addEventListener("load", refreshTriggers, true);
     const refreshFrame = window.requestAnimationFrame(refreshTriggers);
 
     return () => {
-      root.removeEventListener("load", refreshTriggers, true);
       window.cancelAnimationFrame(refreshFrame);
       context.revert();
     };
