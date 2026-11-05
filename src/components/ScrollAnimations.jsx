@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const animationConflictSelector =
-  ".rooms-slider-carousel, .rooms-amenities-gallery, .room-details-gallery";
+  ".rooms-slider-carousel, .rooms-amenities-gallery, .room-details-gallery-section";
 const cardSelector = "article, [class*='-card'], [class*='-item']";
 
 function isInsideCard(element) {

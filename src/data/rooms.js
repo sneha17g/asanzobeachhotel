@@ -2,6 +2,9 @@ import standardRoomPhoto from "../assets/optimized/single-room.jpg";
 import deluxeRoomPhoto from "../assets/optimized/deluxe-room.jpg";
 import familyRoomPhoto from "../assets/optimized/family-room.jpg";
 import familyRoomPhotoTwo from "../assets/optimized/family-room-2.jpg";
+import standardRoomPhotoTwo from "../assets/optimized/room-3.jpg";
+import standardRoomPhotoThree from "../assets/optimized/room-5.jpg";
+import deluxeRoomPhotoTwo from "../assets/optimized/room-6.jpg";
 
 export const rooms = [
   {
@@ -18,6 +21,14 @@ export const rooms = [
         image: standardRoomPhoto,
         imageAlt: "Bright standard guest room with a large bed",
       },
+      {
+        image: standardRoomPhotoTwo,
+        imageAlt: "Another view of a standard guest room with a double bed",
+      },
+      {
+        image: standardRoomPhotoThree,
+        imageAlt: "A standard guest room with a double bed and natural light",
+      },
     ],
   },
   {
@@ -32,6 +43,10 @@ export const rooms = [
       {
         image: deluxeRoomPhoto,
         imageAlt: "Deluxe guest room with a king bed and seating area",
+      },
+      {
+        image: deluxeRoomPhotoTwo,
+        imageAlt: "Additional view of a deluxe guest room with twin beds",
       },
     ],
   },

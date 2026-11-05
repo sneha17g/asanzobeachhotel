@@ -233,7 +233,7 @@
   justify-content: center;
 }
 
-.contact-intro h1,
+.contact-intro h2,
 .contact-information > h2 {
   color: var(--color-dark-brown);
   font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
@@ -404,7 +404,7 @@
     gap: 34px;
   }
 
-  .contact-intro h1,
+  .contact-intro h2,
   .contact-information > h2 {
     font-size: clamp(38px, 5vw, 50px);
   }
@@ -496,7 +496,7 @@
     padding-right: 0;
   }
 
-  .contact-intro h1,
+  .contact-intro h2,
   .contact-information > h2 {
     font-size: clamp(40px, 11vw, 52px);
   }

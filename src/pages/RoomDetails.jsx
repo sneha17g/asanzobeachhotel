@@ -82,8 +82,8 @@ function RoomDetails() {
   return (
     <>
       <SEO
-        title={`${room.name} in Pattaya | Asanzo Beach Hotel`}
-        description={`${room.details} View ${room.name.toLowerCase()} details at Asanzo Beach Hotel in Pattaya, Thailand, and contact our team for current availability.`}
+        title={`${room.name} in Pattaya | ASANZO Beach Hotel`}
+        description={`View the ${room.name.toLowerCase()} at ASANZO Beach Hotel in Pattaya, near Jomtien Beach. ${room.details} Contact us for current rates and availability.`}
         path={`/roomDetails/${room.id}`}
       />
       <section

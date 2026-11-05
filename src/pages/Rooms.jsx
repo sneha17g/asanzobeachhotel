@@ -171,8 +171,8 @@ function Rooms() {
   return (
     <>
       <SEO
-        title="Hotel Rooms in Pattaya | Asanzo Beach Hotel"
-        description="Explore standard, deluxe and family hotel rooms in Pattaya at Asanzo Beach Hotel. Compare room details and contact our team for current availability and rates."
+        title="Pattaya Hotel Rooms Near Jomtien Beach | ASANZO Beach Hotel"
+        description="Compare standard, deluxe, and family rooms at ASANZO Beach Hotel in Pattaya, near Jomtien Beach. Review room details and contact us for current rates and availability."
         path="/rooms"
         pageType="CollectionPage"
       />

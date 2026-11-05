@@ -82,8 +82,8 @@ function About() {
   return (
     <>
       <SEO
-        title="About Asanzo Beach Hotel | Pattaya Accommodation"
-        description="Learn about Asanzo Beach Hotel in Pattaya, Thailand, including its rooms, in-room essentials, dining options and location near Jomtien Beach."
+        title="About ASANZO Beach Hotel | Pattaya Hotel Near Jomtien Beach"
+        description="Learn about ASANZO Beach Hotel in Pattaya, Thailand, and explore our rooms, dining options, in-room amenities, and location near Jomtien Beach."
         path="/about"
         pageType="AboutPage"
       />

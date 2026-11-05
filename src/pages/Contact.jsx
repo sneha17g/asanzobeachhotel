@@ -8,8 +8,8 @@ function Contact() {
   return (
     <>
       <SEO
-        title="Contact Asanzo Beach Hotel | Pattaya, Thailand"
-        description="Contact Asanzo Beach Hotel to ask about hotel rooms, current rates, availability and planning your stay in Pattaya, Thailand."
+        title="Contact ASANZO Beach Hotel in Pattaya | Jomtien Beach"
+        description="Contact ASANZO Beach Hotel in Pattaya to ask about room availability, current rates, directions, and planning a stay near Jomtien Beach."
         path="/contact"
         pageType="ContactPage"
       />
@@ -48,7 +48,7 @@ function Contact() {
             <figure className="contact-hero-stop contact-hero-stop-coast">
               <img
                 src={pattayaCoast}
-                alt=""
+                alt="Pattaya coastline near Jomtien Beach"
                 aria-hidden="true"
                 fetchPriority="high"
               />
@@ -61,7 +61,7 @@ function Contact() {
             <figure className="contact-hero-stop contact-hero-stop-hotel">
               <img
                 src={asanzoHotel}
-                alt=""
+                alt="Exterior of ASANZO Beach Hotel in Pattaya"
                 aria-hidden="true"
                 fetchPriority="high"
               />
@@ -81,7 +81,7 @@ function Contact() {
       >
         <div className="container contact-layout">
           <div className="contact-intro">
-            <h1 id="contact-title">Plan Your Visit</h1>
+            <h2 id="contact-title">Plan Your Visit</h2>
             <p>
               Escape to Asanzo Beach Hotel and enjoy a relaxed seaside stay.
               Whether you are planning a quiet retreat or a getaway with family,

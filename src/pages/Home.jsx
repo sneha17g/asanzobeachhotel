@@ -118,8 +118,8 @@ function Home() {
   return (
     <>
     <SEO
-      title="Pattaya Hotel Near Jomtien Beach | ASANZO Beach Hotel"
-      description="Stay at ASANZO Beach Hotel, a comfortable Pattaya hotel near Jomtien Beach. Explore rooms and family accommodation, see hotel amenities, and contact us for current rates and availability."
+      title="Best Hotels Near Jomtien Beach, Pattaya | Asanzo Beach Hotel"
+      description="Looking for the best hotels near Jomtien Beach, Pattaya? Find comfortable double and family rooms at Asanzo Beach Hotel. Contact us for rates and availability."
       path="/"
       pageType="WebPage"
     />
@@ -127,7 +127,11 @@ function Home() {
       className="home-hero"
       aria-labelledby="home-hero-title"
     >
-      <img className="home-hero-background" src={asanzoHotel} alt="" />
+      <img
+        className="home-hero-background"
+        src={asanzoHotel}
+        alt="Exterior of ASANZO Beach Hotel in Pattaya"
+      />
       <div className="home-hero-shade" aria-hidden="true" />
       <div className="container home-hero-layout">
         <div className="home-hero-copy">
@@ -165,7 +169,7 @@ function Home() {
               <img
                 className="home-hero-photo"
                 src={heroPhotos[incomingPhotoIndex].src}
-                alt=""
+                alt={heroPhotos[incomingPhotoIndex].alt}
                 aria-hidden="true"
               />
             </div>
