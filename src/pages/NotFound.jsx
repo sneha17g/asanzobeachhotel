@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import "./NotFound.css";
 
 function NotFound() {
   useEffect(() => {
-    document.title = "Page Not Found | Asanzo Beach Hotel";
+    document.title = "Page Not Found | ASANZO Beach Hotel";
     let robots = document.head.querySelector('meta[name="robots"]');
     if (!robots) {
       robots = document.createElement("meta");
@@ -16,16 +17,27 @@ function NotFound() {
   }, []);
 
   return (
-    <section className="container" aria-labelledby="not-found-title">
-      <h1 id="not-found-title">Page not found</h1>
-      <p>The page you requested does not exist.</p>
-      <p>
-        <Link to="/">Return to the homepage</Link>
-        {" · "}
-        <Link to="/rooms">Explore our rooms</Link>
-        {" · "}
-        <Link to="/contact">Contact us</Link>
-      </p>
+    <section className="not-found-page" aria-labelledby="not-found-title">
+      <div className="not-found-content">
+        <p className="not-found-eyebrow">ASANZO Beach Hotel · Pattaya</p>
+        <p className="not-found-code" aria-hidden="true">404</p>
+        <h1 id="not-found-title">This page wandered off.</h1>
+        <p className="not-found-description">
+          We can’t find the page you’re looking for. Head back to the hotel or
+          browse our rooms to continue planning your stay.
+        </p>
+        <div className="not-found-actions">
+          <Link className="not-found-home-link" to="/">
+            Back to home <span aria-hidden="true">↗</span>
+          </Link>
+          <Link className="not-found-rooms-link" to="/rooms">
+            Explore our rooms
+          </Link>
+        </div>
+      </div>
+      <div className="not-found-side-note" aria-hidden="true">
+        A slower kind of seaside stay
+      </div>
     </section>
   );
 }

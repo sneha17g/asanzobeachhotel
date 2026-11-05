@@ -3,20 +3,136 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f7ee" />
     <meta name="robots" content="noindex, follow" />
-    <title>Page Not Found | Asanzo Beach Hotel</title>
+    <title>Page Not Found | ASANZO Beach Hotel</title>
     <style>
-      body { margin: 0; padding: 4rem 1.5rem; color: #2f291f; font: 16px/1.6 Arial, sans-serif; }
-      main { max-width: 42rem; margin: 0 auto; }
-      a { color: #6b4525; }
+      :root {
+        color-scheme: light;
+        --cream: #f7f7ee;
+        --brown: #6b4525;
+        --gold: #a8793f;
+        --antique-gold: #b58a4a;
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        min-height: 100vh;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        padding: 100px 32px;
+        background:
+          radial-gradient(ellipse at 82% 18%, #b58a4a38, transparent 34%),
+          linear-gradient(125deg, var(--cream) 20%, #f0eadc 100%);
+        color: var(--brown);
+        font: 15px/1.8 "DM Sans", "Segoe UI", Arial, sans-serif;
+        isolation: isolate;
+      }
+
+      body::after {
+        position: fixed;
+        z-index: -1;
+        right: -0.06em;
+        bottom: -0.34em;
+        color: #6b45250d;
+        content: "404";
+        font: 760px/1 Georgia, "Times New Roman", serif;
+        pointer-events: none;
+      }
+
+      main { width: min(100%, 650px); margin: 0 auto; }
+      .eyebrow {
+        margin: 0 0 28px;
+        color: var(--gold);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1.7px;
+        text-transform: uppercase;
+      }
+      .code {
+        margin: 0 0 5px;
+        color: var(--antique-gold);
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+      }
+      h1 {
+        max-width: 650px;
+        margin: 0;
+        font: 400 clamp(58px, 8vw, 94px)/0.98 Georgia, "Times New Roman", serif;
+        letter-spacing: -0.035em;
+      }
+      .description {
+        max-width: 480px;
+        margin: 24px 0 0;
+        color: #6b4525d1;
+      }
+      .actions {
+        margin-top: 34px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+      a {
+        min-height: 48px;
+        padding: 0 21px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--brown);
+        border-radius: 999px;
+        color: var(--brown);
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        text-decoration: none;
+        transition: transform 180ms ease, background-color 180ms ease;
+      }
+      a:hover { transform: translateY(-2px); }
+      .home-link { gap: 12px; background: var(--brown); color: var(--cream); }
+      .home-link:hover { border-color: var(--gold); background: var(--gold); }
+      .rooms-link { border-color: #6b452547; }
+      .rooms-link:hover { background: #b58a4a24; }
+      .note {
+        position: fixed;
+        right: 32px;
+        bottom: 28px;
+        color: #6b4525a3;
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+      }
+
+      @media (max-width: 700px) {
+        body { min-height: 680px; padding: 100px 28px; }
+        body::after { right: -0.05em; bottom: -0.14em; font-size: 72vw; }
+        .eyebrow { margin-bottom: 24px; }
+        .note { right: 28px; font-size: 9px; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { transition: none !important; }
+      }
     </style>
   </head>
   <body>
     <main>
-      <h1>Page not found</h1>
-      <p>The page you requested does not exist.</p>
-      <p><a href="/">Return to the Asanzo Beach Hotel homepage</a></p>
-      <p><a href="/rooms">Explore our rooms</a> · <a href="/contact">Contact us</a></p>
+      <p class="eyebrow">ASANZO Beach Hotel · Pattaya</p>
+      <p class="code" aria-hidden="true">ERROR 404</p>
+      <h1>That page wandered off.</h1>
+      <p class="description">
+        We can’t find the page you’re looking for. Head back to the hotel or
+        browse our rooms to continue planning your stay.
+      </p>
+      <nav class="actions" aria-label="Helpful links">
+        <a class="home-link" href="/">Back to home <span aria-hidden="true">↗</span></a>
+        <a class="rooms-link" href="/rooms">Explore our rooms</a>
+      </nav>
     </main>
+    <p class="note" aria-hidden="true">A slower kind of seaside stay</p>
   </body>
 </html>

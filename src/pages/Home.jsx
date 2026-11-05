@@ -118,8 +118,8 @@ function Home() {
   return (
     <>
     <SEO
-      title="Asanzo Beach Hotel Pattaya | Comfortable Stay by the Coast"
-      description="Compare comfortable rooms, family accommodation and hotel amenities at Asanzo Beach Hotel, a Pattaya hotel near Jomtien Beach. Contact us for current rates when comparing affordable hotels in Pattaya."
+      title="Pattaya Hotel Near Jomtien Beach | ASANZO Beach Hotel"
+      description="Stay at ASANZO Beach Hotel, a comfortable Pattaya hotel near Jomtien Beach. Explore rooms and family accommodation, see hotel amenities, and contact us for current rates and availability."
       path="/"
       pageType="WebPage"
     />

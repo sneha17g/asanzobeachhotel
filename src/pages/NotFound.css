@@ -1,0 +1,165 @@
+.not-found-page {
+  position: relative;
+  min-height: min(760px, 100svh);
+  overflow: hidden;
+  padding: 160px max(32px, calc((100vw - 1440px) / 2)) 100px;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(
+      ellipse at 82% 18%,
+      color-mix(in srgb, var(--color-antique-gold) 22%, transparent),
+      transparent 34%
+    ),
+    linear-gradient(125deg, #f7f7ee 20%, #f0eadc 100%);
+  color: var(--color-dark-brown);
+  isolation: isolate;
+}
+
+.not-found-page::after {
+  position: absolute;
+  z-index: -1;
+  right: -0.06em;
+  bottom: -0.34em;
+  color: color-mix(in srgb, var(--color-dark-brown) 5%, transparent);
+  content: "404";
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  font-size: clamp(300px, 52vw, 760px);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.not-found-content {
+  width: min(100%, 650px);
+  margin-inline: auto;
+}
+
+.not-found-eyebrow {
+  margin-bottom: 28px;
+  color: var(--color-dark-gold);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+}
+
+.not-found-code {
+  margin-bottom: 5px;
+  color: var(--color-antique-gold);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+}
+
+.not-found-content h1 {
+  max-width: 650px;
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  font-size: clamp(58px, 8vw, 94px);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+}
+
+.not-found-description {
+  max-width: 480px;
+  margin-top: 24px;
+  color: color-mix(in srgb, var(--color-dark-brown) 82%, transparent);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.not-found-actions {
+  margin-top: 34px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.not-found-home-link,
+.not-found-rooms-link {
+  min-height: 48px;
+  padding: 0 21px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-dark-brown);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    transform 180ms ease;
+}
+
+.not-found-home-link {
+  gap: 12px;
+  background: var(--color-dark-brown);
+  color: var(--primary-bg-color);
+}
+
+.not-found-home-link:hover {
+  background: var(--color-dark-gold);
+  border-color: var(--color-dark-gold);
+  transform: translateY(-2px);
+}
+
+.not-found-home-link span {
+  font-size: 16px;
+}
+
+.not-found-rooms-link {
+  border-color: color-mix(in srgb, var(--color-dark-brown) 28%, transparent);
+}
+
+.not-found-rooms-link:hover {
+  background: color-mix(in srgb, var(--color-antique-gold) 14%, transparent);
+  transform: translateY(-2px);
+}
+
+.not-found-side-note {
+  position: absolute;
+  right: max(32px, calc((100vw - 1440px) / 2));
+  bottom: 42px;
+  color: color-mix(in srgb, var(--color-dark-brown) 64%, transparent);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 700px) {
+  .not-found-page {
+    min-height: 680px;
+    padding: 132px 28px 100px;
+  }
+
+  .not-found-page::after {
+    right: -0.05em;
+    bottom: -0.14em;
+    font-size: clamp(260px, 72vw, 460px);
+  }
+
+  .not-found-eyebrow {
+    margin-bottom: 24px;
+  }
+
+  .not-found-content h1 {
+    max-width: 480px;
+  }
+
+  .not-found-side-note {
+    right: 28px;
+    bottom: 28px;
+    font-size: 9px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .not-found-home-link,
+  .not-found-rooms-link {
+    transition: none;
+  }
+}
