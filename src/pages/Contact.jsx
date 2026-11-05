@@ -1,17 +1,25 @@
 import "./Contact.css";
 import asanzoHotel from "../assets/optimized/hotel-front.jpg";
 import pattayaCoast from "../assets/optimized/hero-frame-2.jpg";
+import SEO from "../components/SEO.jsx";
+import Eyebrow from "../components/Eyebrow.jsx";
 
 function Contact() {
   return (
     <>
+      <SEO
+        title="Contact Asanzo Beach Hotel | Pattaya, Thailand"
+        description="Contact Asanzo Beach Hotel to ask about hotel rooms, current rates, availability and planning your stay in Pattaya, Thailand."
+        path="/contact"
+        pageType="ContactPage"
+      />
       <section
         className="contact-hero"
         aria-labelledby="contact-hero-title"
       >
         <div className="container contact-hero-layout">
           <div className="contact-hero-copy">
-            <p className="contact-hero-eyebrow">A warm welcome awaits</p>
+            <Eyebrow className="contact-hero-eyebrow">A warm welcome awaits</Eyebrow>
             <h1 id="contact-hero-title">Your home in Thailand</h1>
             <p className="contact-hero-description">
               Make your way to Pattaya and settle in by the coast at ASANZO

@@ -9,6 +9,7 @@ import Contact from "./pages/Contact.jsx";
 import Home from "./pages/Home.jsx";
 import RoomDetails from "./pages/RoomDetails.jsx";
 import Rooms from "./pages/Rooms.jsx";
+import NotFound from "./pages/NotFound.jsx";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/rooms" element={<Rooms />} />
             <Route path="/roomDetails/:roomId" element={<RoomDetails />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />

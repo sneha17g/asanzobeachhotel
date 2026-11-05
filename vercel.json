@@ -1,0 +1,11 @@
+{
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "^/(about|rooms|contact)/?$", "dest": "/index.html" },
+    {
+      "src": "^/roomDetails/(standard-room|deluxe-room|family-room)/?$",
+      "dest": "/index.html"
+    },
+    { "src": "^/.*$", "status": 404, "dest": "/404.html" }
+  ]
+}

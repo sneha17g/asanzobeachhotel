@@ -4,6 +4,8 @@ import eventVideo from "../assets/About/eventVideo.mp4";
 import hotelAboutvideo from "../assets/About/hotelAboutvideo.mp4";
 import aboutTree from "../assets/About/aboutTree.png";
 import { rooms } from "../data/rooms.js";
+import SEO from "../components/SEO.jsx";
+import Eyebrow from "../components/Eyebrow.jsx";
 import "./About.css";
 
 const aboutHighlights = [
@@ -79,11 +81,15 @@ function AboutFacilityIcon({ name }) {
 function About() {
   return (
     <>
+      <SEO
+        title="About Asanzo Beach Hotel | Pattaya Accommodation"
+        description="Learn about Asanzo Beach Hotel in Pattaya, Thailand, including its rooms, in-room essentials, dining options and location near Jomtien Beach."
+        path="/about"
+        pageType="AboutPage"
+      />
       <section className="about-hero" aria-labelledby="about-hero-title">
         <div className="about-hero-copy">
-          <p className="about-eyebrow">
-            <span aria-hidden="true" /> ASANZO BEACH HOTEL
-          </p>
+          <Eyebrow className="about-eyebrow">ASANZO BEACH HOTEL</Eyebrow>
           <h1 id="about-hero-title">
             We are Asanzo
           </h1>
@@ -204,12 +210,12 @@ function About() {
         <div className="container">
           <div className="about-section-heading">
             <div>
-              <p className="about-section-eyebrow">Find your room</p>
+              <Eyebrow className="about-section-eyebrow">Find your room</Eyebrow>
               <h2 id="about-rooms-title">Space to settle in.</h2>
             </div>
             <p>
-              Choose a comfortable room for a Pattaya getaway, a beach break or
-              time together.
+              Choose a comfortable room for a Pattaya getaway, a coastal break
+              or family time together.
             </p>
           </div>
 
@@ -260,8 +266,8 @@ function About() {
       >
         <div className="container about-facilities-container">
           <div className="about-facilities-intro">
-            <p className="about-section-eyebrow">Made for an easy stay</p>
-            <h2 id="about-facilities-title">Comfort in the details.</h2>
+            <Eyebrow className="about-section-eyebrow">Made for an easy stay</Eyebrow>
+            <h2 id="about-facilities-title">Hotel Amenities in Pattaya</h2>
             <p>
               From a place to dine to the everyday essentials in your room,
               find the comforts that help you feel at home.
@@ -290,7 +296,7 @@ function About() {
       >
         <div className="container about-location-layout">
           <div className="about-location-copy">
-            <p className="about-section-eyebrow">A convenient place to stay</p>
+            <Eyebrow className="about-section-eyebrow">A convenient place to stay</Eyebrow>
             <h2 id="about-location-title">Pattaya, close to the coast.</h2>
             <p>
               Settle into the energy of Pattaya with Jomtien Beach nearby. Make
@@ -323,7 +329,7 @@ function About() {
 
       <section className="about-final-cta" aria-labelledby="about-final-title">
         <div className="container about-final-content">
-          <p className="about-section-eyebrow">Your Pattaya stay begins here</p>
+          <Eyebrow className="about-section-eyebrow">Your Pattaya stay begins here</Eyebrow>
           <h2 id="about-final-title">Ready to Experience ASANZO?</h2>
           <p>
             We look forward to welcoming you. Explore our rooms or get in touch

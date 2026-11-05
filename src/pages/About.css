@@ -31,13 +31,6 @@
   text-transform: uppercase;
 }
 
-.about-eyebrow span {
-  width: 25px;
-  height: 1px;
-  flex: 0 0 auto;
-  background: var(--color-antique-gold);
-}
-
 .about-hero h1 {
   max-width: 4.2em;
   margin: 0;

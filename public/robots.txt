@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://asanzobeachhotel-two.vercel.app/sitemap.xml
+Sitemap: https://asanzobeachhotel.com/sitemap.xml

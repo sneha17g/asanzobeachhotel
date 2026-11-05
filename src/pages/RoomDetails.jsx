@@ -1,6 +1,9 @@
 import { Link, useParams } from "react-router-dom";
 import Button from "../components/Button.jsx";
 import { rooms } from "../data/rooms.js";
+import SEO from "../components/SEO.jsx";
+import NotFound from "./NotFound.jsx";
+import Eyebrow from "../components/Eyebrow.jsx";
 import { useLayoutEffect, useRef, useState } from "react";
 import "./RoomDetails.css";
 
@@ -74,21 +77,15 @@ function RoomDetails() {
     return () => window.removeEventListener("resize", updateGalleryTrackOffset);
   }, [galleryPosition, gallery.length]);
 
-  if (!room) {
-    return (
-      <section className="room-details-not-found">
-        <div className="container room-details-not-found-content">
-          <p className="room-details-eyebrow">Asanzo accommodation</p>
-          <h1>Room not found</h1>
-          <p>We couldn’t find a room matching this link.</p>
-          <Button text="Browse all rooms" to="/rooms" />
-        </div>
-      </section>
-    );
-  }
+  if (!room) return <NotFound />;
 
   return (
     <>
+      <SEO
+        title={`${room.name} in Pattaya | Asanzo Beach Hotel`}
+        description={`${room.details} View ${room.name.toLowerCase()} details at Asanzo Beach Hotel in Pattaya, Thailand, and contact our team for current availability.`}
+        path={`/roomDetails/${room.id}`}
+      />
       <section
         className="room-details-hero rooms-page"
         aria-labelledby="room-details-title"
@@ -100,7 +97,7 @@ function RoomDetails() {
         />
         <div className="room-details-hero-overlay" aria-hidden="true" />
         <div className="container room-details-hero-content">
-          <p className="room-details-eyebrow">Asanzo accommodation</p>
+          <Eyebrow className="room-details-eyebrow">Asanzo accommodation</Eyebrow>
           <h1 id="room-details-title">{room.name}</h1>
           <p className="room-details-description">{room.description}</p>
           <Button
@@ -125,9 +122,9 @@ function RoomDetails() {
 
           <div className="room-details-description-layout">
             <div className="room-details-description-copy">
-              <p className="room-details-description-eyebrow">
+              <Eyebrow className="room-details-description-eyebrow">
                 Your stay at Asanzo
-              </p>
+              </Eyebrow>
               <h3>{room.name}</h3>
               <p className="room-details-description-details">
                 {room.details}

@@ -1,0 +1,28 @@
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    ErrorDocument 404 /404.html
+
+    # Redirect www to non-www
+    RewriteCond %{HTTP_HOST} ^www\.asanzobeachhotel\.com$ [NC]
+    RewriteRule ^(.*)$ https://asanzobeachhotel.com/$1 [R=301,L]
+
+    # Redirect HTTP to HTTPS
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^ https://asanzobeachhotel.com%{REQUEST_URI} [R=301,L]
+
+    # Serve existing files and directories
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Send valid React routes to the SPA entry point.
+    RewriteRule ^$ index.html [L]
+    RewriteRule ^(about|rooms|contact)/?$ index.html [L]
+    RewriteRule ^roomDetails/(standard-room|deluxe-room|family-room)/?$ index.html [L]
+
+    # Unknown routes should keep an HTTP 404 status.
+    RewriteRule ^ - [R=404,L]
+</IfModule>

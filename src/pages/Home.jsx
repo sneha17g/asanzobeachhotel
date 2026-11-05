@@ -14,6 +14,8 @@ import frameFour from "../assets/optimized/hero-frame-4.jpg";
 import frameFive from "../assets/optimized/hero-frame-5.jpg";
 import frameSix from "../assets/optimized/hero-frame-6.jpg";
 import { rooms } from "../data/rooms.js";
+import SEO from "../components/SEO.jsx";
+import Eyebrow from "../components/Eyebrow.jsx";
 import "./Home.css";
 
 const heroPhotos = [
@@ -115,6 +117,12 @@ function Home() {
 
   return (
     <>
+    <SEO
+      title="Asanzo Beach Hotel Pattaya | Comfortable Stay by the Coast"
+      description="Compare comfortable rooms, family accommodation and hotel amenities at Asanzo Beach Hotel, a Pattaya hotel near Jomtien Beach. Contact us for current rates when comparing affordable hotels in Pattaya."
+      path="/"
+      pageType="WebPage"
+    />
     <section
       className="home-hero"
       aria-labelledby="home-hero-title"
@@ -123,20 +131,15 @@ function Home() {
       <div className="home-hero-shade" aria-hidden="true" />
       <div className="container home-hero-layout">
         <div className="home-hero-copy">
-          <p className="home-hero-eyebrow">
-            Pattaya, Thailand <span aria-hidden="true">/</span> A slower kind
+          <Eyebrow className="home-hero-eyebrow">
+            A slower kind
             of seaside stay
-          </p>
+          </Eyebrow>
           <h1 className="home-hero-title" id="home-hero-title">
             ASANZO <span>Beach Hotel</span>
           </h1>
           <p className="home-hero-tagline">
-            A Relaxing Escape in Pattaya, Thailand
-          </p>
-          <p className="home-hero-intro">
-            Find your moment by the sea at ASANZO Beach Hotel. Settle into
-            thoughtfully comfortable rooms, enjoy the warmth of Thai
-            hospitality, and let the coast set the pace for your stay.
+            A relaxed stay in Pattaya
           </p>
           <div className="home-hero-actions">
             <Button className="home-hero-cta" text="Explore Rooms" to="/rooms" />
@@ -181,14 +184,20 @@ function Home() {
     >
       <div className="container home-welcome-layout">
         <div className="home-welcome-copy">
-          <p className="home-section-eyebrow">Welcome to ASANZO</p>
+          <Eyebrow className="home-section-eyebrow">Welcome to ASANZO</Eyebrow>
           <h2 id="home-welcome-title">
             A little closer to the sea, a little more at ease.
           </h2>
           <p>
-            Make ASANZO Beach Hotel your comfortable base in Pattaya. Enjoy a
-            relaxed place to return to after a day by the coast, with room
-            choices for couples, friends and families.
+            ASANZO Beach Hotel is a comfortable Pattaya hotel with warm Thai
+            hospitality, thoughtfully comfortable rooms and Jomtien Beach
+            nearby.
+          </p>
+          <p>
+            Compare room options, amenities and location as you choose where to
+            stay. If you are comparing affordable hotels in Pattaya, contact
+            our team for current rates and availability. The best hotel for
+            your trip depends on what matters most to you.
           </p>
           <Button
             className="home-text-button"
@@ -214,7 +223,7 @@ function Home() {
       <div className="container">
         <div className="home-section-heading home-accommodation-heading">
           <div>
-            <p className="home-section-eyebrow">Stay your way</p>
+            <Eyebrow className="home-section-eyebrow">Stay your way</Eyebrow>
             <h2 id="home-accommodation-title">Our accommodation</h2>
           </div>
           <Link className="home-section-link" to="/rooms">
@@ -266,7 +275,7 @@ function Home() {
     >
       <div className="container home-amenities-layout">
         <div className="home-amenities-copy">
-          <p className="home-section-eyebrow">Thoughtful essentials</p>
+          <Eyebrow className="home-section-eyebrow">Thoughtful essentials</Eyebrow>
           <h2 id="home-amenities-title">Comfort in all the right details.</h2>
           <p>
             Settle in with the essentials for a smooth and comfortable stay.
@@ -306,7 +315,7 @@ function Home() {
         />
       </div>
       <div className="home-beach-copy">
-        <p className="home-section-eyebrow">The coast is calling</p>
+        <Eyebrow className="home-section-eyebrow">The coast is calling</Eyebrow>
         <h2 id="home-beach-title">Pattaya days, at your own pace.</h2>
         <p>
           From a slow morning to an afternoon by the water, Jomtien Beach and
@@ -331,7 +340,7 @@ function Home() {
       <div className="container">
         <div className="home-section-heading">
           <div>
-            <p className="home-section-eyebrow">A glimpse of the stay</p>
+            <Eyebrow className="home-section-eyebrow">A glimpse of the stay</Eyebrow>
             <h2 id="home-gallery-title">Discover ASANZO</h2>
           </div>
           <Link className="home-section-link" to="/about">
@@ -357,7 +366,7 @@ function Home() {
     >
       <div className="container home-location-layout">
         <div className="home-location-copy">
-          <p className="home-section-eyebrow">Find your way here</p>
+          <Eyebrow className="home-section-eyebrow">Find your way here</Eyebrow>
           <h2 id="home-location-title">A Pattaya stay by the coast.</h2>
           <p>
             Find ASANZO Beach Hotel in Pattaya, Thailand, and plan your route
@@ -385,7 +394,7 @@ function Home() {
 
     <section className="home-final-cta" aria-labelledby="home-final-cta-title">
       <div className="container home-final-cta-content">
-        <p className="home-section-eyebrow">Your seaside stay starts here</p>
+        <Eyebrow className="home-section-eyebrow">Your seaside stay starts here</Eyebrow>
         <h2 id="home-final-cta-title">
           Ready for a slower kind of escape?
         </h2>

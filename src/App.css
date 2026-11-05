@@ -82,6 +82,33 @@ button:focus-visible {
   text-transform: uppercase;
 }
 
+.eyebrow {
+  display: inline-flex;
+  width: fit-content;
+  max-width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  gap: 0.65em;
+  padding: 7px 12px;
+  border: 1px solid color-mix(in srgb, var(--primary-bg-color) 62%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--primary-bg-color) 82%, transparent);
+  box-shadow: 0 8px 28px color-mix(in srgb, var(--color-dark-brown) 18%, transparent);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.eyebrow-tree {
+  width: 1.2em;
+  height: 1.2em;
+  flex: 0 0 auto;
+  fill: currentColor;
+}
+
+.eyebrow-copy {
+  display: inline;
+}
+
 .route-page h1 {
   max-width: 800px;
   color: var(--color-dark-brown);

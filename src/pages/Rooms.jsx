@@ -8,6 +8,8 @@ import roomPhotoFour from "../assets/optimized/room-4.jpg";
 import roomPhotoFive from "../assets/optimized/room-5.jpg";
 import roomPhotoSix from "../assets/optimized/room-6.jpg";
 import { rooms } from "../data/rooms.js";
+import SEO from "../components/SEO.jsx";
+import Eyebrow from "../components/Eyebrow.jsx";
 import "./Rooms.css";
 
 const amenities = [
@@ -168,6 +170,12 @@ function Rooms() {
 
   return (
     <>
+      <SEO
+        title="Hotel Rooms in Pattaya | Asanzo Beach Hotel"
+        description="Explore standard, deluxe and family hotel rooms in Pattaya at Asanzo Beach Hotel. Compare room details and contact our team for current availability and rates."
+        path="/rooms"
+        pageType="CollectionPage"
+      />
       <section className="rooms-page rooms-hero" aria-labelledby="rooms-title">
         <img
           className="rooms-hero-image"
@@ -179,12 +187,12 @@ function Rooms() {
         />
         <div className="rooms-hero-overlay" aria-hidden="true" />
         <div className="container rooms-hero-content">
-          <p className="rooms-hero-eyebrow">Stay at Asanzo</p>
-          <h1 id="rooms-title">Our Accommodation</h1>
+          <Eyebrow className="rooms-hero-eyebrow">Stay at Asanzo</Eyebrow>
+          <h1 id="rooms-title">Hotel Rooms in Pattaya</h1>
           <p className="rooms-hero-description">
-            Find a comfortable place to unwind between days by the coast. For
-            room details and current availability, our team can help you plan
-            your stay.
+            Explore comfortable standard, deluxe and family accommodation in
+            Pattaya. For room details, current availability and rates, our team
+            can help you plan your stay.
           </p>
           <div className="rooms-hero-actions">
             <Button
@@ -311,7 +319,7 @@ function Rooms() {
         aria-labelledby="rooms-amenities-title"
       >
         <div className="container rooms-amenities-container">
-          <h2 id="rooms-amenities-title">Amenities</h2>
+          <h2 id="rooms-amenities-title">Hotel Amenities</h2>
           <div className="rooms-amenities-list">
             {[amenities.slice(0, 5), amenities.slice(5)].map(
               (row, rowIndex) => (

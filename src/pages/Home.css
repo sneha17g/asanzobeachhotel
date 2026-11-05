@@ -39,7 +39,7 @@
   position: relative;
   z-index: 1;
   min-height: min(920px, 100svh);
-  padding-top: 132px;
+  padding-top: 52px;
   padding-bottom: 88px;
   display: grid;
   grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
@@ -53,12 +53,13 @@
 }
 
 .home-hero-eyebrow {
+  max-width: 100%;
   margin-bottom: 24px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
-  color: var(--color-antique-gold);
+  color: var(--color-dark-brown);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.7px;
@@ -66,23 +67,15 @@
   text-transform: uppercase;
 }
 
-.home-hero-eyebrow::before {
-  width: 30px;
-  height: 1px;
-  margin-right: 2px;
-  background: var(--color-antique-gold);
-  content: "";
-}
-
-.home-hero-eyebrow span {
-  color: color-mix(in srgb, var(--primary-bg-color) 60%, transparent);
+.home-hero-eyebrow .eyebrow-copy > span {
+  color: color-mix(in srgb, var(--color-dark-brown) 58%, transparent);
 }
 
 .home-hero-title {
   max-width: 620px;
   color: var(--primary-bg-color);
   font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-  font-size: clamp(72px, 8.2vw, 120px);
+  font-size: clamp(54px, 5.4vw, 82px);
   font-weight: 400;
   letter-spacing: -0.035em;
   line-height: 0.78;
@@ -106,17 +99,9 @@
   margin-top: 30px;
   color: var(--primary-bg-color);
   font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-  font-size: clamp(24px, 2.6vw, 34px);
+  font-size: clamp(21px, 2vw, 27px);
   font-style: italic;
   line-height: 1.2;
-}
-
-.home-hero-intro {
-  max-width: 500px;
-  margin-top: 18px;
-  color: color-mix(in srgb, var(--primary-bg-color) 86%, transparent);
-  font-size: 14px;
-  line-height: 1.9;
 }
 
 .home-hero-actions {
@@ -345,13 +330,6 @@
   gap: 12px;
   margin-bottom: 20px;
   color: var(--color-antique-gold);
-}
-
-.home-welcome-copy .home-section-eyebrow::before {
-  width: 30px;
-  height: 1px;
-  background: var(--color-antique-gold);
-  content: "";
 }
 
 .home-welcome-copy h2,
@@ -847,7 +825,7 @@
   }
 
   .home-hero-title {
-    font-size: clamp(62px, 8vw, 88px);
+    font-size: clamp(48px, 6vw, 70px);
   }
 
   .home-hero-visual {
@@ -962,7 +940,7 @@
   }
 
   .home-hero-title {
-    font-size: clamp(58px, 14vw, 80px);
+    font-size: clamp(46px, 11vw, 66px);
   }
 
   .home-hero-title span {
@@ -971,14 +949,7 @@
 
   .home-hero-tagline {
     margin-top: 18px;
-    font-size: 23px;
-  }
-
-  .home-hero-intro {
-    max-width: 480px;
-    margin-top: 10px;
-    font-size: 14px;
-    line-height: 1.7;
+    font-size: 21px;
   }
 
   .home-hero-cta {
